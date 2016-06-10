@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		950312AA1D0B690A003D73EB /* BetterTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950312A91D0B690A003D73EB /* BetterTextField.swift */; };
 		95C00DD91D0B6417004113A3 /* BetterTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 95C00DD81D0B6417004113A3 /* BetterTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		950312A91D0B690A003D73EB /* BetterTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BetterTextField.swift; sourceTree = "<group>"; };
 		95C00DD51D0B6417004113A3 /* BetterTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BetterTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		95C00DD81D0B6417004113A3 /* BetterTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BetterTextField.h; sourceTree = "<group>"; };
 		95C00DDA1D0B6417004113A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -46,6 +48,7 @@
 		95C00DD71D0B6417004113A3 /* BetterTextField */ = {
 			isa = PBXGroup;
 			children = (
+				950312A91D0B690A003D73EB /* BetterTextField.swift */,
 				95C00DD81D0B6417004113A3 /* BetterTextField.h */,
 				95C00DDA1D0B6417004113A3 /* Info.plist */,
 			);
@@ -130,6 +133,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				950312AA1D0B690A003D73EB /* BetterTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +234,7 @@
 		95C00DDE1D0B6417004113A3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -240,12 +245,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = it.fixb.BetterTextField;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		95C00DDF1D0B6417004113A3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -278,6 +285,7 @@
 				95C00DDF1D0B6417004113A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
