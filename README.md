@@ -4,7 +4,8 @@ Handles UITextField's inability to center the placeholder and text, if text alig
 
 ## Installation
 With cocoapods:
-`pod 'BetterTextField'
+
+`pod 'BetterTextField'`
 
 Or drag `BetterTextField.swift` into your project.
 
