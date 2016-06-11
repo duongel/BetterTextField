@@ -1,8 +1,10 @@
 PODS:
   - BetterTextField (0.1.1)
+  - IQKeyboardManager (4.0.3)
 
 DEPENDENCIES:
   - BetterTextField (from `~/Documents/Workspace/BetterTextField`)
+  - IQKeyboardManager
 
 EXTERNAL SOURCES:
   BetterTextField:
@@ -10,7 +12,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   BetterTextField: cc657825864aaec48780072be0d79b0df31169ec
+  IQKeyboardManager: be9695ffc5a52077deb4847608f338771022d6d1
 
-PODFILE CHECKSUM: 659f574b4a523a74cec9531d4bd353ad3d938ec2
+PODFILE CHECKSUM: ca65c816eef507f1dafa94986247b31db447dbd2
 
 COCOAPODS: 1.0.1

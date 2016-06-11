@@ -8,6 +8,7 @@
 
 import UIKit
 import BetterTextField
+import IQKeyboardManager
 
 class ViewController: UIViewController {
 
@@ -15,6 +16,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.addTapGesture()
     }
 
     // MARK: - Illustration
@@ -39,11 +41,19 @@ class ViewController: UIViewController {
     }
 
     @IBAction func switchChanged(sender: UISwitch) {
-        print(sender.on)
         if sender.on {
             self.drawCenterLine()
         } else {
             self.removeCenterLine()
         }
+    }
+
+    func addTapGesture() {
+        let tapper = UITapGestureRecognizer(target: self, action: #selector(self.tapped))
+        self.view.addGestureRecognizer(tapper)
+    }
+
+    func tapped() {
+        IQKeyboardManager.sharedManager().resignFirstResponder()
     }
 }
