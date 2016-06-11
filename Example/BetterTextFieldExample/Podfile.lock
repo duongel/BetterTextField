@@ -1,0 +1,16 @@
+PODS:
+  - BetterTextField (0.1.1)
+
+DEPENDENCIES:
+  - BetterTextField (from `~/Documents/Workspace/BetterTextField`)
+
+EXTERNAL SOURCES:
+  BetterTextField:
+    :path: "~/Documents/Workspace/BetterTextField"
+
+SPEC CHECKSUMS:
+  BetterTextField: cc657825864aaec48780072be0d79b0df31169ec
+
+PODFILE CHECKSUM: 659f574b4a523a74cec9531d4bd353ad3d938ec2
+
+COCOAPODS: 1.0.1

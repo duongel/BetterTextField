@@ -1,0 +1,6 @@
+framework module Pods_BetterTextFieldExample {
+  umbrella header "Pods-BetterTextFieldExample-umbrella.h"
+
+  export *
+  module * { export * }
+}

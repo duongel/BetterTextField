@@ -1,0 +1,6 @@
+framework module BetterTextField {
+  umbrella header "BetterTextField-umbrella.h"
+
+  export *
+  module * { export * }
+}

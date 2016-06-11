@@ -1,0 +1,371 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0FF4606DCC8D6334970FC9CD /* Pods_BetterTextFieldExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27CEB1898E9D01880C112422 /* Pods_BetterTextFieldExample.framework */; };
+		95521F861D0C14D000411CD8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95521F851D0C14D000411CD8 /* AppDelegate.swift */; };
+		95521F881D0C14D000411CD8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95521F871D0C14D000411CD8 /* ViewController.swift */; };
+		95521F8B1D0C14D000411CD8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95521F891D0C14D000411CD8 /* Main.storyboard */; };
+		95521F8D1D0C14D000411CD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95521F8C1D0C14D000411CD8 /* Assets.xcassets */; };
+		95521F901D0C14D000411CD8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95521F8E1D0C14D000411CD8 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		27CEB1898E9D01880C112422 /* Pods_BetterTextFieldExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BetterTextFieldExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		95521F821D0C14D000411CD8 /* BetterTextFieldExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BetterTextFieldExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		95521F851D0C14D000411CD8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		95521F871D0C14D000411CD8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		95521F8A1D0C14D000411CD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		95521F8C1D0C14D000411CD8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		95521F8F1D0C14D000411CD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		95521F911D0C14D000411CD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		99FA874F8682B444FF1E5026 /* Pods-BetterTextFieldExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BetterTextFieldExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-BetterTextFieldExample/Pods-BetterTextFieldExample.release.xcconfig"; sourceTree = "<group>"; };
+		BB3F2F4472155FFA377DC75C /* Pods-BetterTextFieldExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BetterTextFieldExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BetterTextFieldExample/Pods-BetterTextFieldExample.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		95521F7F1D0C14D000411CD8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0FF4606DCC8D6334970FC9CD /* Pods_BetterTextFieldExample.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		26D8E53C48D632E67689AE3E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				27CEB1898E9D01880C112422 /* Pods_BetterTextFieldExample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8C92B1D9B68A360E8999B4F2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BB3F2F4472155FFA377DC75C /* Pods-BetterTextFieldExample.debug.xcconfig */,
+				99FA874F8682B444FF1E5026 /* Pods-BetterTextFieldExample.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		95521F791D0C14D000411CD8 = {
+			isa = PBXGroup;
+			children = (
+				95521F841D0C14D000411CD8 /* BetterTextFieldExample */,
+				95521F831D0C14D000411CD8 /* Products */,
+				8C92B1D9B68A360E8999B4F2 /* Pods */,
+				26D8E53C48D632E67689AE3E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		95521F831D0C14D000411CD8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				95521F821D0C14D000411CD8 /* BetterTextFieldExample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		95521F841D0C14D000411CD8 /* BetterTextFieldExample */ = {
+			isa = PBXGroup;
+			children = (
+				95521F851D0C14D000411CD8 /* AppDelegate.swift */,
+				95521F871D0C14D000411CD8 /* ViewController.swift */,
+				95521F891D0C14D000411CD8 /* Main.storyboard */,
+				95521F8C1D0C14D000411CD8 /* Assets.xcassets */,
+				95521F8E1D0C14D000411CD8 /* LaunchScreen.storyboard */,
+				95521F911D0C14D000411CD8 /* Info.plist */,
+			);
+			path = BetterTextFieldExample;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		95521F811D0C14D000411CD8 /* BetterTextFieldExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 95521F941D0C14D000411CD8 /* Build configuration list for PBXNativeTarget "BetterTextFieldExample" */;
+			buildPhases = (
+				7973CA54501623F95CAC807B /* [CP] Check Pods Manifest.lock */,
+				95521F7E1D0C14D000411CD8 /* Sources */,
+				95521F7F1D0C14D000411CD8 /* Frameworks */,
+				95521F801D0C14D000411CD8 /* Resources */,
+				A37B634CA1843490F6200527 /* [CP] Embed Pods Frameworks */,
+				3B5A484ED639AE9D2C2E0B2D /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BetterTextFieldExample;
+			productName = BetterTextFieldExample;
+			productReference = 95521F821D0C14D000411CD8 /* BetterTextFieldExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		95521F7A1D0C14D000411CD8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = fixbit;
+				TargetAttributes = {
+					95521F811D0C14D000411CD8 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = 95521F7D1D0C14D000411CD8 /* Build configuration list for PBXProject "BetterTextFieldExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 95521F791D0C14D000411CD8;
+			productRefGroup = 95521F831D0C14D000411CD8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				95521F811D0C14D000411CD8 /* BetterTextFieldExample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		95521F801D0C14D000411CD8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95521F901D0C14D000411CD8 /* LaunchScreen.storyboard in Resources */,
+				95521F8D1D0C14D000411CD8 /* Assets.xcassets in Resources */,
+				95521F8B1D0C14D000411CD8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3B5A484ED639AE9D2C2E0B2D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BetterTextFieldExample/Pods-BetterTextFieldExample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7973CA54501623F95CAC807B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A37B634CA1843490F6200527 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BetterTextFieldExample/Pods-BetterTextFieldExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		95521F7E1D0C14D000411CD8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95521F881D0C14D000411CD8 /* ViewController.swift in Sources */,
+				95521F861D0C14D000411CD8 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		95521F891D0C14D000411CD8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				95521F8A1D0C14D000411CD8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		95521F8E1D0C14D000411CD8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				95521F8F1D0C14D000411CD8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		95521F921D0C14D000411CD8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		95521F931D0C14D000411CD8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		95521F951D0C14D000411CD8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB3F2F4472155FFA377DC75C /* Pods-BetterTextFieldExample.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BetterTextFieldExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = it.fixb.BetterTextFieldExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		95521F961D0C14D000411CD8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99FA874F8682B444FF1E5026 /* Pods-BetterTextFieldExample.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BetterTextFieldExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = it.fixb.BetterTextFieldExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		95521F7D1D0C14D000411CD8 /* Build configuration list for PBXProject "BetterTextFieldExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95521F921D0C14D000411CD8 /* Debug */,
+				95521F931D0C14D000411CD8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		95521F941D0C14D000411CD8 /* Build configuration list for PBXNativeTarget "BetterTextFieldExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95521F951D0C14D000411CD8 /* Debug */,
+				95521F961D0C14D000411CD8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 95521F7A1D0C14D000411CD8 /* Project object */;
+}
