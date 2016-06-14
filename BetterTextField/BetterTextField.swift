@@ -11,68 +11,47 @@ import UIKit
 @IBDesignable
 public class BetterTextField: UITextField {
 
-    /// The insets for the text field's text.
-    public var textEdgeInsets = UIEdgeInsetsZero
-
-    /// The insets for the text field's placeholder text.
-    public var placeholderEdgeInsets = UIEdgeInsetsZero
-
     /// A buffer for the placeholder's text.
     private var placeholderText: String?
 
-    /// Margin left for the text's position.
-    @IBInspectable public var textMarginLeft: CGFloat {
+    /// Determines if the user manually changed the text margins.
+    private var defaultMode = true
+
+    /// The text's margin left manually set by the user.
+    private var textMarginLeft: CGFloat = 7.0
+
+    /// The text's margin right manually set by the user.
+    private var textMarginRight: CGFloat = 7.0
+
+    /// The text's margin left.
+    @IBInspectable public var marginLeft: CGFloat {
         get {
-            return textEdgeInsets.left
+            if defaultMode && self.clearButtonMode != .Never && self.textAlignment == .Center {
+                return 24.0
+            } else {
+                return textMarginLeft
+            }
         }
+
         set {
-            textEdgeInsets = UIEdgeInsetsMake(
-                textEdgeInsets.top,
-                newValue,
-                textEdgeInsets.bottom,
-                textEdgeInsets.right)
+            defaultMode = false
+            textMarginLeft = newValue
         }
     }
 
-    /// Margin right for the text's position.
-    @IBInspectable public var textMarginRight: CGFloat {
+    /// The text's margin right.
+    @IBInspectable public var marginRight: CGFloat {
         get {
-            return textEdgeInsets.right
+            if defaultMode && self.clearButtonMode != .Never {
+                return 24.0
+            } else {
+                return textMarginRight
+            }
         }
-        set {
-            textEdgeInsets = UIEdgeInsetsMake(
-                textEdgeInsets.top,
-                textEdgeInsets.left,
-                textEdgeInsets.bottom,
-                newValue)
-        }
-    }
 
-    /// Margin left for the placeholder's position.
-    @IBInspectable public var placeholderMarginLeft: CGFloat {
-        get {
-            return placeholderEdgeInsets.left
-        }
         set {
-            placeholderEdgeInsets = UIEdgeInsetsMake(
-                placeholderEdgeInsets.top,
-                newValue,
-                placeholderEdgeInsets.bottom,
-                placeholderEdgeInsets.right)
-        }
-    }
-
-    /// Margin right for the placeholder's position.
-    @IBInspectable public var placeholderMarginRight: CGFloat {
-        get {
-            return placeholderEdgeInsets.right
-        }
-        set {
-            placeholderEdgeInsets = UIEdgeInsetsMake(
-                placeholderEdgeInsets.top,
-                placeholderEdgeInsets.left,
-                placeholderEdgeInsets.bottom,
-                newValue)
+            defaultMode = false
+            textMarginRight = newValue
         }
     }
 
@@ -92,12 +71,12 @@ public class BetterTextField: UITextField {
 
     // Insets for the text position.
     override public func editingRectForBounds(bounds: CGRect) -> CGRect {
-        return UIEdgeInsetsInsetRect(bounds, textEdgeInsets)
+        return UIEdgeInsetsInsetRect(bounds, UIEdgeInsetsMake(0, marginLeft, 0, marginRight))
     }
 
     // Insets for the placeholder position.
     override public func textRectForBounds(bounds: CGRect) -> CGRect {
-        return UIEdgeInsetsInsetRect(bounds, placeholderEdgeInsets)
+        return UIEdgeInsetsInsetRect(bounds, UIEdgeInsetsMake(0, marginLeft, 0, marginRight))
     }
 
     /*
