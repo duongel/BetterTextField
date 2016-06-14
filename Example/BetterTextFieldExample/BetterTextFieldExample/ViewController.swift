@@ -9,6 +9,7 @@
 import UIKit
 import BetterTextField
 import IQKeyboardManager
+import TouchVisualizer
 
 class ViewController: UIViewController {
 
@@ -22,6 +23,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         addTapGesture()
         centerLine = getCenterLine()
+
+        Visualizer.start(getConfig())
     }
 
     func addTapGesture() {
@@ -34,6 +37,13 @@ class ViewController: UIViewController {
     }
 
     // MARK: - Illustration
+
+    func getConfig() -> Configuration {
+        var config = Configuration()
+        config.defaultSize = CGSizeMake(20, 20)
+
+        return config
+    }
 
     func getCenterLine() -> CAShapeLayer {
         let screenSize: CGRect = UIScreen.mainScreen().bounds

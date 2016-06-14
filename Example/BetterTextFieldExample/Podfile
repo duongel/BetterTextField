@@ -5,4 +5,5 @@ target 'BetterTextFieldExample' do
 
   pod 'BetterTextField', :path => '~/Documents/Workspace/BetterTextField'
   pod 'IQKeyboardManager'
+  pod "TouchVisualizer", '~>1.4.0'
 end
