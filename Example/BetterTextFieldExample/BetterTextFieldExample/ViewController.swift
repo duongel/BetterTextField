@@ -84,4 +84,24 @@ class ViewController: UIViewController {
             textField.textAlignment = alignment
         }
     }
+
+    @IBAction func marginLeftChanged(sender: UITextField) {
+        if let value = Int(sender.text!) {
+            betterTextField.marginLeft = CGFloat(value)
+        } else {
+            betterTextField.marginLeft = CGFloat(7)
+        }
+
+        betterTextField .setNeedsLayout()
+    }
+
+    @IBAction func marginRightChanged(sender: UITextField) {
+        if let value = Int(sender.text!) {
+            betterTextField.marginRight = CGFloat(value)
+        } else {
+            betterTextField.marginLeft = CGFloat(7)
+        }
+
+        betterTextField .setNeedsLayout()
+    }
 }
