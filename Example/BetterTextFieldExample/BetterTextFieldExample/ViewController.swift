@@ -12,6 +12,8 @@ import IQKeyboardManager
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var uiTextField: UITextField!
+    @IBOutlet weak var betterTextField: BetterTextField!
     var centerLine: CAShapeLayer?
 
     override func viewDidLoad() {
