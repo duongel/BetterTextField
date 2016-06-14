@@ -1,6 +1,11 @@
 # BetterTextField
 A drop-in replacement for UITextField.
-Handles UITextField's inability to center the placeholder and text, if text alignment is set to centered and clear button is visible.
+
+* handles UITextField's inability to center the placeholder and text, if text alignment is set to centered and clear button is visible.
+* adds margin-left and/or margin-right the easy way.
+
+## Screenshots
+
 
 ## Installation
 With cocoapods:
