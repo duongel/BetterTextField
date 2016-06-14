@@ -5,7 +5,7 @@ A drop-in replacement for UITextField.
 * adds margin-left and/or margin-right the easy way.
 
 ## Screenshots
-
+![Demo](Example/Screenshots/demo.gif)
 
 ## Installation
 With cocoapods:
