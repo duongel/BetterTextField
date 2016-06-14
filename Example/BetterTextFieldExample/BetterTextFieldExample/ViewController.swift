@@ -16,14 +16,26 @@ class ViewController: UIViewController {
     @IBOutlet weak var betterTextField: BetterTextField!
     var centerLine: CAShapeLayer?
 
+    // MARK: - Initialization
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.addTapGesture()
+        addTapGesture()
+        centerLine = getCenterLine()
+    }
+
+    func addTapGesture() {
+        let tapper = UITapGestureRecognizer(target: self, action: #selector(self.tapped))
+        self.view.addGestureRecognizer(tapper)
+    }
+
+    func tapped() {
+        IQKeyboardManager.sharedManager().resignFirstResponder()
     }
 
     // MARK: - Illustration
 
-    func drawCenterLine() {
+    func getCenterLine() -> CAShapeLayer {
         let screenSize: CGRect = UIScreen.mainScreen().bounds
         let path = UIBezierPath()
         path.moveToPoint(CGPointMake(screenSize.width / 2, 0.0))
@@ -34,8 +46,7 @@ class ViewController: UIViewController {
         shapeLayer.strokeColor = UIColor.redColor().CGColor
         shapeLayer.lineWidth = 1.0
 
-        self.view.layer.addSublayer(shapeLayer)
-        centerLine = shapeLayer
+        return shapeLayer
     }
 
     func removeCenterLine() {
@@ -44,18 +55,9 @@ class ViewController: UIViewController {
 
     @IBAction func switchChanged(sender: UISwitch) {
         if sender.on {
-            self.drawCenterLine()
+            self.view.layer.addSublayer(centerLine!)
         } else {
             self.removeCenterLine()
         }
-    }
-
-    func addTapGesture() {
-        let tapper = UITapGestureRecognizer(target: self, action: #selector(self.tapped))
-        self.view.addGestureRecognizer(tapper)
-    }
-
-    func tapped() {
-        IQKeyboardManager.sharedManager().resignFirstResponder()
     }
 }
