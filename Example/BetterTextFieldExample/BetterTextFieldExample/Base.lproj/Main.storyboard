@@ -126,7 +126,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                 <connections>
-                                    <action selector="marginLeftChanged:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="sO0-1j-IZ5"/>
+                                    <action selector="marginLeftChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="IZw-uG-Nnc"/>
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="right" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xCW-Uw-vOS">
@@ -138,7 +138,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="marginRightChanged:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="OJV-sc-Zce"/>
+                                    <action selector="marginRightChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="5Rd-ah-q8g"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="margin-left" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agK-yE-4Bp">

@@ -82,6 +82,7 @@ class ViewController: UIViewController {
     func textField(textField: UITextField, setTextAlignment index: Int) {
         if let alignment = NSTextAlignment(rawValue: index) {
             textField.textAlignment = alignment
+            textField.setNeedsLayout()
         }
     }
 
