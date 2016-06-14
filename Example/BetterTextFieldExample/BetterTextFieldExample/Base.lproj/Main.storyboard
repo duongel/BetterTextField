@@ -136,7 +136,7 @@
                                     <constraint firstAttribute="height" constant="30" id="f8t-qb-gk8"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                 <connections>
                                     <action selector="marginRightChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="5Rd-ah-q8g"/>
                                 </connections>
