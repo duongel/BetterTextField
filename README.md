@@ -9,6 +9,11 @@ With cocoapods:
 
 Or drag `BetterTextField.swift` into your project.
 
+## Known Issues
+If text alignment is set to centered, margin-left equals margin-right by default to keep the text centered.
+
+![Margin-left Issue](Example/Screenshots/issue.png)
+
 # License
 MIT License
 
