@@ -60,4 +60,28 @@ class ViewController: UIViewController {
             self.removeCenterLine()
         }
     }
+
+    // MARK: - Text field settings
+
+    @IBAction func clearButtonModeChanged(sender: UISegmentedControl) {
+        textField(uiTextField, setClearButtonMode: sender.selectedSegmentIndex)
+        textField(betterTextField, setClearButtonMode: sender.selectedSegmentIndex)
+    }
+
+    @IBAction func textAlignmentChanged(sender: UISegmentedControl) {
+        textField(uiTextField, setTextAlignment: sender.selectedSegmentIndex)
+        textField(betterTextField, setTextAlignment: sender.selectedSegmentIndex)
+    }
+
+    func textField(textField: UITextField, setClearButtonMode index: Int) {
+        if let mode = UITextFieldViewMode(rawValue: index) {
+            textField.clearButtonMode = mode
+        }
+    }
+
+    func textField(textField: UITextField, setTextAlignment index: Int) {
+        if let alignment = NSTextAlignment(rawValue: index) {
+            textField.textAlignment = alignment
+        }
+    }
 }
