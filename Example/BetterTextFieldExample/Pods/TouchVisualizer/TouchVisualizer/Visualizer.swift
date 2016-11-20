@@ -9,41 +9,41 @@ final public class Visualizer:NSObject {
     
     // MARK: - Public Variables
     static public let sharedInstance = Visualizer()
-    private var enabled = false
-    private var config: Configuration!
-    private var touchViews = [TouchView]()
-    private var previousLog = ""
+    fileprivate var enabled = false
+    fileprivate var config: Configuration!
+    fileprivate var touchViews = [TouchView]()
+    fileprivate var previousLog = ""
     
     // MARK: - Object life cycle
     private override init() {
       super.init()
-        NSNotificationCenter
-            .defaultCenter()
-            .addObserver(self, selector: #selector(Visualizer.orientationDidChangeNotification(_:)), name: UIDeviceOrientationDidChangeNotification, object: nil)
+        NotificationCenter
+            .default
+            .addObserver(self, selector: #selector(Visualizer.orientationDidChangeNotification(_:)), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
         
-        NSNotificationCenter
-            .defaultCenter()
-            .addObserver(self, selector: #selector(Visualizer.applicationDidBecomeActiveNotification(_:)), name: UIApplicationDidBecomeActiveNotification, object: nil)
+        NotificationCenter
+            .default
+            .addObserver(self, selector: #selector(Visualizer.applicationDidBecomeActiveNotification(_:)), name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
         
         UIDevice
-            .currentDevice()
+            .current
             .beginGeneratingDeviceOrientationNotifications()
         
         warnIfSimulator()
     }
     
     deinit {
-        NSNotificationCenter
-            .defaultCenter()
+        NotificationCenter
+            .default
             .removeObserver(self)
     }
     
     // MARK: - Helper Functions
-    @objc internal func applicationDidBecomeActiveNotification(notification: NSNotification) {
-        UIApplication.sharedApplication().keyWindow?.swizzle()
+    @objc internal func applicationDidBecomeActiveNotification(_ notification: Notification) {
+        UIApplication.shared.keyWindow?.swizzle()
     }
     
-    @objc internal func orientationDidChangeNotification(notification: NSNotification) {
+    @objc internal func orientationDidChangeNotification(_ notification: Notification) {
         let instance = Visualizer.sharedInstance
         for touch in instance.touchViews {
             touch.removeFromSuperview()
@@ -57,22 +57,26 @@ extension Visualizer {
     }
     
     // MARK: - Start and Stop functions
-    public class func start() {
-        start(Configuration())
-    }
     
-    public class func start(config: Configuration) {
+    public class func start(_ config: Configuration = Configuration()) {
+		
+		if config.showsLog {
+			print("Visualizer start...")
+		}
         let instance = sharedInstance
         instance.enabled = true
         instance.config = config
         
-        if let window = UIApplication.sharedApplication().keyWindow {
+        if let window = UIApplication.shared.keyWindow {
             for subview in window.subviews {
                 if let subview = subview as? TouchView {
                     subview.removeFromSuperview()
                 }
             }
         }
+		if config.showsLog {
+			print("started !")
+		}
     }
     
     public class func stop() {
@@ -102,7 +106,7 @@ extension Visualizer {
         return touchView!
     }
     
-    private func findTouchView(touch: UITouch) -> TouchView? {
+    private func findTouchView(_ touch: UITouch) -> TouchView? {
         for view in touchViews {
             if touch == view.touch {
                 return view
@@ -112,8 +116,8 @@ extension Visualizer {
         return nil
     }
     
-    public func handleEvent(event: UIEvent) {
-        if event.type != .Touches {
+    public func handleEvent(_ event: UIEvent) {
+        if event.type != .touches {
             return
         }
         
@@ -121,31 +125,31 @@ extension Visualizer {
             return
         }
         
-        let keyWindow = UIApplication.sharedApplication().keyWindow!
-        for touch in event.allTouches()! {
+        let keyWindow = UIApplication.shared.keyWindow!
+        for touch in event.allTouches! {
             let phase = touch.phase
             
             switch phase {
-            case .Began:
+            case .began:
                 let view = dequeueTouchView()
                 view.config = Visualizer.sharedInstance.config
                 view.touch = touch
                 view.beginTouch()
-                view.center = touch.locationInView(keyWindow)
+                view.center = touch.location(in: keyWindow)
                 keyWindow.addSubview(view)
                 log(touch)
-            case .Moved:
+            case .moved:
                 if let view = findTouchView(touch) {
-                    view.center = touch.locationInView(keyWindow)
+                    view.center = touch.location(in: keyWindow)
                 }
                 
                 log(touch)
-            case .Stationary:
+            case .stationary:
                 log(touch)
                 break
-            case .Ended, .Cancelled:
+            case .ended, .cancelled:
                 if let view = findTouchView(touch) {
-                    UIView.animateWithDuration(0.2, delay: 0.0, options: .AllowUserInteraction, animations: { () -> Void  in
+                    UIView.animate(withDuration: 0.2, delay: 0.0, options: .allowUserInteraction, animations: { () -> Void  in
                         view.alpha = 0.0
                         view.endTouch()
                         }, completion: { [unowned self] (finished) -> Void in
@@ -168,7 +172,7 @@ extension Visualizer {
     }
     
     // MARK: - Logging
-    public func log(touch: UITouch) {
+    public func log(_ touch: UITouch) {
         if !config.showsLog {
             return
         }
@@ -185,11 +189,11 @@ extension Visualizer {
             
             var phase: String!
             switch touch.phase {
-            case .Began: phase = "B"
-            case .Moved: phase = "M"
-            case .Ended: phase = "E"
-            case .Cancelled: phase = "C"
-            case .Stationary: phase = "S"
+            case .began: phase = "B"
+            case .moved: phase = "M"
+            case .ended: phase = "E"
+            case .cancelled: phase = "C"
+            case .stationary: phase = "S"
             }
             
             let x = String(format: "%.02f", view.center.x)

@@ -33,27 +33,27 @@ class ViewController: UIViewController {
     }
 
     func tapped() {
-        IQKeyboardManager.sharedManager().resignFirstResponder()
+        IQKeyboardManager.shared().resignFirstResponder()
     }
 
     // MARK: - Illustration
 
     func getConfig() -> Configuration {
         var config = Configuration()
-        config.defaultSize = CGSizeMake(20, 20)
+        config.defaultSize = CGSize(width: 20, height: 20)
 
         return config
     }
 
     func getCenterLine() -> CAShapeLayer {
-        let screenSize: CGRect = UIScreen.mainScreen().bounds
+        let screenSize: CGRect = UIScreen.main.bounds
         let path = UIBezierPath()
-        path.moveToPoint(CGPointMake(screenSize.width / 2, 0.0))
-        path.addLineToPoint(CGPointMake(screenSize.width / 2, screenSize.height))
+        path.move(to: CGPoint(x: screenSize.width / 2, y: 0.0))
+        path.addLine(to: CGPoint(x: screenSize.width / 2, y: screenSize.height))
 
         let shapeLayer = CAShapeLayer()
-        shapeLayer.path = path.CGPath
-        shapeLayer.strokeColor = UIColor.redColor().CGColor
+        shapeLayer.path = path.cgPath
+        shapeLayer.strokeColor = UIColor.red.cgColor
         shapeLayer.lineWidth = 1.0
 
         return shapeLayer
@@ -63,8 +63,8 @@ class ViewController: UIViewController {
         centerLine?.removeFromSuperlayer()
     }
 
-    @IBAction func switchChanged(sender: UISwitch) {
-        if sender.on {
+    @IBAction func switchChanged(_ sender: UISwitch) {
+        if sender.isOn {
             self.view.layer.addSublayer(centerLine!)
         } else {
             self.removeCenterLine()
@@ -73,30 +73,30 @@ class ViewController: UIViewController {
 
     // MARK: - Text field settings
 
-    @IBAction func clearButtonModeChanged(sender: UISegmentedControl) {
+    @IBAction func clearButtonModeChanged(_ sender: UISegmentedControl) {
         textField(uiTextField, setClearButtonMode: sender.selectedSegmentIndex)
         textField(betterTextField, setClearButtonMode: sender.selectedSegmentIndex)
     }
 
-    @IBAction func textAlignmentChanged(sender: UISegmentedControl) {
+    @IBAction func textAlignmentChanged(_ sender: UISegmentedControl) {
         textField(uiTextField, setTextAlignment: sender.selectedSegmentIndex)
         textField(betterTextField, setTextAlignment: sender.selectedSegmentIndex)
     }
 
-    func textField(textField: UITextField, setClearButtonMode index: Int) {
+    func textField(_ textField: UITextField, setClearButtonMode index: Int) {
         if let mode = UITextFieldViewMode(rawValue: index) {
             textField.clearButtonMode = mode
         }
     }
 
-    func textField(textField: UITextField, setTextAlignment index: Int) {
+    func textField(_ textField: UITextField, setTextAlignment index: Int) {
         if let alignment = NSTextAlignment(rawValue: index) {
             textField.textAlignment = alignment
             textField.setNeedsLayout()
         }
     }
 
-    @IBAction func marginLeftChanged(sender: UITextField) {
+    @IBAction func marginLeftChanged(_ sender: UITextField) {
         if let value = Int(sender.text!) {
             betterTextField.marginLeft = CGFloat(value)
         } else {
@@ -106,7 +106,7 @@ class ViewController: UIViewController {
         betterTextField .setNeedsLayout()
     }
 
-    @IBAction func marginRightChanged(sender: UITextField) {
+    @IBAction func marginRightChanged(_ sender: UITextField) {
         if let value = Int(sender.text!) {
             betterTextField.marginRight = CGFloat(value)
         } else {

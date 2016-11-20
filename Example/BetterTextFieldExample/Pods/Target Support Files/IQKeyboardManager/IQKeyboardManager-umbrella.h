@@ -1,4 +1,14 @@
+#ifdef __OBJC__
 #import <UIKit/UIKit.h>
+#else
+#ifndef FOUNDATION_EXPORT
+#if defined(__cplusplus)
+#define FOUNDATION_EXPORT extern "C"
+#else
+#define FOUNDATION_EXPORT extern
+#endif
+#endif
+#endif
 
 #import "IQNSArray+Sort.h"
 #import "IQUIScrollView+Additions.h"
@@ -16,7 +26,6 @@
 #import "IQTitleBarButtonItem.h"
 #import "IQToolbar.h"
 #import "IQUIView+IQKeyboardToolbar.h"
-#import "KeyboardManager.h"
 
 FOUNDATION_EXPORT double IQKeyboardManagerVersionNumber;
 FOUNDATION_EXPORT const unsigned char IQKeyboardManagerVersionString[];
