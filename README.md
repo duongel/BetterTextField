@@ -4,8 +4,12 @@ A drop-in replacement for UITextField.
 * handles UITextField's inability to center the placeholder and text, if text alignment is set to centered and clear button is visible.
 * adds margin-left and/or margin-right the easy way.
 
+## Requirements
+* Xcode 8
+* Swift 3
+
 ## Screenshots
-![Demo](Example/Screenshots/demo.gif)
+<img src="Example/Screenshots/demo.gif" alt="Demo" width="300px"/>
 
 ## Installation
 With cocoapods:
@@ -17,7 +21,7 @@ Or drag `BetterTextField.swift` into your project.
 ## Known Issues
 If text alignment is set to centered, margin-left equals margin-right by default to keep the text centered.
 
-![Margin-left Issue](Example/Screenshots/issue.png)
+<img src="Example/Screenshots/issue.png" alt="Margin-left Issue" width="400px"/>
 
 # License
 MIT License
