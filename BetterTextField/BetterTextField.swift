@@ -9,24 +9,24 @@
 import UIKit
 
 @IBDesignable
-public class BetterTextField: UITextField {
+open class BetterTextField: UITextField {
 
     /// A buffer for the placeholder's text.
-    private var placeholderText: String?
+    fileprivate var placeholderText: String?
 
     /// Determines if the user manually changed the text margins.
-    private var defaultMode = true
+    fileprivate var defaultMode = true
 
     /// The text's margin left manually set by the user.
-    private var textMarginLeft: CGFloat = 7.0
+    fileprivate var textMarginLeft: CGFloat = 7.0
 
     /// The text's margin right manually set by the user.
-    private var textMarginRight: CGFloat = 7.0
+    fileprivate var textMarginRight: CGFloat = 7.0
 
     /// The text's margin left.
-    @IBInspectable public var marginLeft: CGFloat {
+    @IBInspectable open var marginLeft: CGFloat {
         get {
-            if defaultMode && self.clearButtonMode != .Never && self.textAlignment == .Center {
+            if defaultMode && self.clearButtonMode != .never && self.textAlignment == .center {
                 return 24.0
             } else {
                 return textMarginLeft
@@ -40,9 +40,9 @@ public class BetterTextField: UITextField {
     }
 
     /// The text's margin right.
-    @IBInspectable public var marginRight: CGFloat {
+    @IBInspectable open var marginRight: CGFloat {
         get {
-            if defaultMode && self.clearButtonMode != .Never {
+            if defaultMode && self.clearButtonMode != .never {
                 return 24.0
             } else {
                 return textMarginRight
@@ -70,12 +70,12 @@ public class BetterTextField: UITextField {
     // MARK: - Overridden methods
 
     // Insets for the text position.
-    override public func editingRectForBounds(bounds: CGRect) -> CGRect {
+    override open func editingRect(forBounds bounds: CGRect) -> CGRect {
         return UIEdgeInsetsInsetRect(bounds, UIEdgeInsetsMake(0, marginLeft, 0, marginRight))
     }
 
     // Insets for the placeholder position.
-    override public func textRectForBounds(bounds: CGRect) -> CGRect {
+    override open func textRect(forBounds bounds: CGRect) -> CGRect {
         return UIEdgeInsetsInsetRect(bounds, UIEdgeInsetsMake(0, marginLeft, 0, marginRight))
     }
 
@@ -83,7 +83,7 @@ public class BetterTextField: UITextField {
      * Removes the placeholder text when text field becomes first responder to avoid cursor jumping,
      * if text alignment is set to centered.
      */
-    override public func becomeFirstResponder() -> Bool {
+    override open func becomeFirstResponder() -> Bool {
         let becameFirstResponder = super.becomeFirstResponder()
 
         if becameFirstResponder {
@@ -97,7 +97,7 @@ public class BetterTextField: UITextField {
      * Restores the placeholder text to its original value, before it was removed when text field became
      * first responder.
      */
-    override public func resignFirstResponder() -> Bool {
+    override open func resignFirstResponder() -> Bool {
         let resigendFirstResponder = super.resignFirstResponder()
 
         if resigendFirstResponder {
