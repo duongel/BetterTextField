@@ -1,5 +1,5 @@
 PODS:
-  - BetterTextField (0.2.0)
+  - BetterTextField (0.3.0)
   - IQKeyboardManager (4.0.7)
   - TouchVisualizer (2.0.1)
 
@@ -13,7 +13,7 @@ EXTERNAL SOURCES:
     :path: "~/Documents/Workspace/BetterTextField"
 
 SPEC CHECKSUMS:
-  BetterTextField: 95e320d8a578379f6e77ba5238e6516b52372ec6
+  BetterTextField: e94974ca8a7425c0cf8d2e7f9c01c9514be861d0
   IQKeyboardManager: 69002bb4fea60596b710e57d426abc00e5063630
   TouchVisualizer: d1bd1b438d084245332c222d9e14416c271c5f25
 
