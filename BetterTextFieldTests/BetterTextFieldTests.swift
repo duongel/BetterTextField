@@ -11,27 +11,39 @@ import XCTest
 
 class BetterTextFieldTests: XCTestCase {
 
-    func testMargins() {
+    func testPosition() {
         let textField = BetterTextField()
+        textField.frame = CGRect(x: 0, y: 0, width: 100, height: 50)
+        let defaultMargin: CGFloat = 7
+        var editingRect = textField.editingRect(forBounds: textField.frame)
+        var textRect = textField.textRect(forBounds: textField.frame)
+
+        XCTAssertNotNil(textField)
+        XCTAssertEqual(editingRect.origin.x, defaultMargin)
+        XCTAssertEqual(editingRect.size.width, textField.frame.size.width - 2 * defaultMargin)
+        XCTAssertEqual(textRect.origin.x, defaultMargin)
+        XCTAssertEqual(textRect.size.width, textField.frame.size.width - 2 * defaultMargin)
+
         let marginLeft: CGFloat = 10.0
         let marginRight: CGFloat = 20.0
-        textField.frame = CGRect(x: 0, y: 0, width: 100, height: 50)
         textField.marginLeft = marginLeft
         textField.marginRight = marginRight
 
-        let editingRect = textField.editingRect(forBounds: textField.frame)
+        editingRect = textField.editingRect(forBounds: textField.frame)
+        textRect = textField.textRect(forBounds: textField.frame)
 
-        XCTAssertNotNil(textField)
         XCTAssertEqual(editingRect.origin.x, marginLeft)
         XCTAssertEqual(editingRect.size.width, textField.frame.size.width - marginLeft - marginRight)
+        XCTAssertEqual(textRect.origin.x, marginLeft)
+        XCTAssertEqual(textRect.size.width, textField.frame.size.width - marginLeft - marginRight)
     }
 
-    func testPlaceholder() {
+    func testPlaceholderLogic() {
         let textField = BetterTextField()
         let placeholder = "very long placeholder"
         textField.frame = CGRect(x: 0, y: 0, width: 100, height: 50)
         textField.placeholder = placeholder
-        
+
         // Build a view hierarchy first. Otherwise, text field will refuse to become first responder
         let window = UIWindow()
         let view = UIView()
@@ -39,10 +51,10 @@ class BetterTextFieldTests: XCTestCase {
         view.addSubview(textField)
 
         XCTAssertEqual(textField.placeholder, placeholder)
-        
+
         _ = textField.becomeFirstResponder()
         XCTAssertEqual(textField.placeholder, "")
-        
+
         _ = textField.resignFirstResponder()
         XCTAssertEqual(textField.placeholder, placeholder)
     }
