@@ -3,10 +3,11 @@
 //  Primes
 //
 //  Created by Hua Duong Nguyen on 06/06/16.
-//  Copyright © 2016 fixb.it. All rights reserved.
+//  Copyright © 2017 appic.me. All rights reserved.
 //
 
 import UIKit
+
 
 @IBDesignable
 open class BetterTextField: UITextField {
@@ -54,17 +55,27 @@ open class BetterTextField: UITextField {
             textMarginRight = newValue
         }
     }
-
-    // MARK: - Initialization
-
-    override public init(frame: CGRect) {
-        super.init(frame: frame)
-        placeholderText = placeholder
+    
+    /// The text field's corner radius. Default is 0.
+    @IBInspectable var cornerRadius: CGFloat = 0 {
+        didSet {
+            layer.cornerRadius = cornerRadius
+            layer.masksToBounds = cornerRadius > 0
+        }
     }
-
-    required public init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        placeholderText = placeholder
+    
+    /// The text field's border width. Default is 0.
+    @IBInspectable var borderWidth: CGFloat = 0 {
+        didSet {
+            layer.borderWidth = borderWidth
+        }
+    }
+    
+    /// The text field's border color. Default is nil.
+    @IBInspectable var borderColor: UIColor? {
+        didSet {
+            layer.borderColor = borderColor?.cgColor
+        }
     }
 
     // MARK: - Overridden methods
@@ -87,6 +98,7 @@ open class BetterTextField: UITextField {
         let becameFirstResponder = super.becomeFirstResponder()
 
         if becameFirstResponder {
+            placeholderText = placeholder
             placeholder = ""
         }
 
@@ -102,6 +114,7 @@ open class BetterTextField: UITextField {
 
         if resigendFirstResponder {
             placeholder = placeholderText
+            placeholderText = ""
         }
 
         return resigendFirstResponder

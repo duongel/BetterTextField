@@ -8,17 +8,40 @@
 
 /* Begin PBXBuildFile section */
 		950312AA1D0B690A003D73EB /* BetterTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950312A91D0B690A003D73EB /* BetterTextField.swift */; };
+		956637C01E6C096100FA1CEA /* BetterTextFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956637BF1E6C096100FA1CEA /* BetterTextFieldTests.swift */; };
+		956637C21E6C096100FA1CEA /* BetterTextField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95C00DD51D0B6417004113A3 /* BetterTextField.framework */; };
 		95C00DD91D0B6417004113A3 /* BetterTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 95C00DD81D0B6417004113A3 /* BetterTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		956637C31E6C096100FA1CEA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 95C00DCC1D0B6417004113A3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 95C00DD41D0B6417004113A3;
+			remoteInfo = BetterTextField;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		950312A91D0B690A003D73EB /* BetterTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BetterTextField.swift; sourceTree = "<group>"; };
+		956637BD1E6C096100FA1CEA /* BetterTextFieldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BetterTextFieldTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		956637BF1E6C096100FA1CEA /* BetterTextFieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterTextFieldTests.swift; sourceTree = "<group>"; };
+		956637C11E6C096100FA1CEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95C00DD51D0B6417004113A3 /* BetterTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BetterTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		95C00DD81D0B6417004113A3 /* BetterTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BetterTextField.h; sourceTree = "<group>"; };
 		95C00DDA1D0B6417004113A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		956637BA1E6C096100FA1CEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				956637C21E6C096100FA1CEA /* BetterTextField.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		95C00DD11D0B6417004113A3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -29,10 +52,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		956637BE1E6C096100FA1CEA /* BetterTextFieldTests */ = {
+			isa = PBXGroup;
+			children = (
+				956637BF1E6C096100FA1CEA /* BetterTextFieldTests.swift */,
+				956637C11E6C096100FA1CEA /* Info.plist */,
+			);
+			path = BetterTextFieldTests;
+			sourceTree = "<group>";
+		};
 		95C00DCB1D0B6417004113A3 = {
 			isa = PBXGroup;
 			children = (
 				95C00DD71D0B6417004113A3 /* BetterTextField */,
+				956637BE1E6C096100FA1CEA /* BetterTextFieldTests */,
 				95C00DD61D0B6417004113A3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				95C00DD51D0B6417004113A3 /* BetterTextField.framework */,
+				956637BD1E6C096100FA1CEA /* BetterTextFieldTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -69,6 +103,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		956637BC1E6C096100FA1CEA /* BetterTextFieldTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 956637C71E6C096100FA1CEA /* Build configuration list for PBXNativeTarget "BetterTextFieldTests" */;
+			buildPhases = (
+				956637B91E6C096100FA1CEA /* Sources */,
+				956637BA1E6C096100FA1CEA /* Frameworks */,
+				956637BB1E6C096100FA1CEA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				956637C41E6C096100FA1CEA /* PBXTargetDependency */,
+			);
+			name = BetterTextFieldTests;
+			productName = BetterTextFieldTests;
+			productReference = 956637BD1E6C096100FA1CEA /* BetterTextFieldTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		95C00DD41D0B6417004113A3 /* BetterTextField */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 95C00DDD1D0B6417004113A3 /* Build configuration list for PBXNativeTarget "BetterTextField" */;
@@ -93,9 +145,15 @@
 		95C00DCC1D0B6417004113A3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0820;
-				ORGANIZATIONNAME = fixbit;
+				ORGANIZATIONNAME = Appic;
 				TargetAttributes = {
+					956637BC1E6C096100FA1CEA = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = CWZAR6V4F5;
+						ProvisioningStyle = Automatic;
+					};
 					95C00DD41D0B6417004113A3 = {
 						CreatedOnToolsVersion = 7.3;
 						LastSwiftMigration = 0810;
@@ -115,11 +173,19 @@
 			projectRoot = "";
 			targets = (
 				95C00DD41D0B6417004113A3 /* BetterTextField */,
+				956637BC1E6C096100FA1CEA /* BetterTextFieldTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		956637BB1E6C096100FA1CEA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		95C00DD31D0B6417004113A3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -130,6 +196,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		956637B91E6C096100FA1CEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				956637C01E6C096100FA1CEA /* BetterTextFieldTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		95C00DD01D0B6417004113A3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -140,7 +214,44 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		956637C41E6C096100FA1CEA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 95C00DD41D0B6417004113A3 /* BetterTextField */;
+			targetProxy = 956637C31E6C096100FA1CEA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		956637C51E6C096100FA1CEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				DEVELOPMENT_TEAM = CWZAR6V4F5;
+				INFOPLIST_FILE = BetterTextFieldTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.appic.BetterTextFieldTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		956637C61E6C096100FA1CEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				DEVELOPMENT_TEAM = CWZAR6V4F5;
+				INFOPLIST_FILE = BetterTextFieldTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.appic.BetterTextFieldTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 		95C00DDB1D0B6417004113A3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -249,7 +360,7 @@
 				INFOPLIST_FILE = BetterTextField/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = it.fixb.BetterTextField;
+				PRODUCT_BUNDLE_IDENTIFIER = me.appic.BetterTextField;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -269,7 +380,7 @@
 				INFOPLIST_FILE = BetterTextField/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = it.fixb.BetterTextField;
+				PRODUCT_BUNDLE_IDENTIFIER = me.appic.BetterTextField;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -279,6 +390,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		956637C71E6C096100FA1CEA /* Build configuration list for PBXNativeTarget "BetterTextFieldTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				956637C51E6C096100FA1CEA /* Debug */,
+				956637C61E6C096100FA1CEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		95C00DCF1D0B6417004113A3 /* Build configuration list for PBXProject "BetterTextField" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

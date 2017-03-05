@@ -9,9 +9,19 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>BetterTextFieldTests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>956637BC1E6C096100FA1CEA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>95C00DD41D0B6417004113A3</key>
 		<dict>
 			<key>primary</key>
