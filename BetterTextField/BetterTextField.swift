@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 @IBDesignable
 open class BetterTextField: UITextField {
 
@@ -77,18 +78,6 @@ open class BetterTextField: UITextField {
         }
     }
 
-    // MARK: - Initialization
-
-    override public init(frame: CGRect) {
-        super.init(frame: frame)
-        placeholderText = placeholder
-    }
-
-    required public init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        placeholderText = placeholder
-    }
-
     // MARK: - Overridden methods
 
     // Insets for the text position.
@@ -109,6 +98,7 @@ open class BetterTextField: UITextField {
         let becameFirstResponder = super.becomeFirstResponder()
 
         if becameFirstResponder {
+            placeholderText = placeholder
             placeholder = ""
         }
 
@@ -124,6 +114,7 @@ open class BetterTextField: UITextField {
 
         if resigendFirstResponder {
             placeholder = placeholderText
+            placeholderText = ""
         }
 
         return resigendFirstResponder
