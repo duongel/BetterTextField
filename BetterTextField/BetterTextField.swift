@@ -3,7 +3,7 @@
 //  Primes
 //
 //  Created by Hua Duong Nguyen on 06/06/16.
-//  Copyright © 2016 fixb.it. All rights reserved.
+//  Copyright © 2017 appic.me. All rights reserved.
 //
 
 import UIKit
