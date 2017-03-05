@@ -3,7 +3,7 @@
 //  BetterTextField
 //
 //  Created by Hua Duong Nguyen on 10/06/16.
-//  Copyright © 2016 fixbit. All rights reserved.
+//  Copyright © 2017 appic.me. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
