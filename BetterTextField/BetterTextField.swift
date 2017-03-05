@@ -54,6 +54,28 @@ open class BetterTextField: UITextField {
             textMarginRight = newValue
         }
     }
+    
+    /// The text field's corner radius. Default is 0.
+    @IBInspectable var cornerRadius: CGFloat = 0 {
+        didSet {
+            layer.cornerRadius = cornerRadius
+            layer.masksToBounds = cornerRadius > 0
+        }
+    }
+    
+    /// The text field's border width. Default is 0.
+    @IBInspectable var borderWidth: CGFloat = 0 {
+        didSet {
+            layer.borderWidth = borderWidth
+        }
+    }
+    
+    /// The text field's border color. Default is nil.
+    @IBInspectable var borderColor: UIColor? {
+        didSet {
+            layer.borderColor = borderColor?.cgColor
+        }
+    }
 
     // MARK: - Initialization
 
