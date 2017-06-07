@@ -80,12 +80,17 @@ open class BetterTextField: UITextField {
 
     // MARK: - Overridden methods
 
-    // Insets for the text position.
+    // Insets for the editable text position.
     override open func editingRect(forBounds bounds: CGRect) -> CGRect {
         return UIEdgeInsetsInsetRect(bounds, UIEdgeInsetsMake(0, marginLeft, 0, marginRight))
     }
 
     // Insets for the placeholder position.
+    override open func placeholderRect(forBounds bounds: CGRect) -> CGRect {
+        return UIEdgeInsetsInsetRect(bounds, UIEdgeInsetsMake(0, marginLeft, 0, marginRight))
+    }
+
+    // Insets for the text position.
     override open func textRect(forBounds bounds: CGRect) -> CGRect {
         return UIEdgeInsetsInsetRect(bounds, UIEdgeInsetsMake(0, marginLeft, 0, marginRight))
     }
