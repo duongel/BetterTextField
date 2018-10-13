@@ -2,7 +2,7 @@
 //  BetterTextField.swift
 //  Primes
 //
-//  Created by Hua Duong Nguyen on 06/06/16.
+//  Created by Hua Duong Tran on 06/06/16.
 //  Copyright © 2017 appic.me. All rights reserved.
 //
 
