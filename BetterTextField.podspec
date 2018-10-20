@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = "BetterTextField"
-  s.version = "0.5.0"
+  s.version = "0.5.1"
   s.license = { :type => "MIT", :file => "LICENSE" }
   s.summary = "A drop-in replacement for UITextField."
   s.description = <<-DESC
