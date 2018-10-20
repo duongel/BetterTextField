@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
     "Handles UITextField's inability to center the placeholder and text, if text alignment is set to centered and clear button is visible."
                    DESC
   s.homepage = "https://github.com/duongel/BetterTextField"
-  s.author = { "Hua Duong Nguyen" => "duongel@gmail.com" }
+  s.author = { "Hua Duong Tran" => "duongel@gmail.com" }
   s.source = { :git => "https://github.com/duongel/BetterTextField.git", :tag => "#{s.version}" }
 
   s.platform = :ios
