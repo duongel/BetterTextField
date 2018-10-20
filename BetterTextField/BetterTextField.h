@@ -2,7 +2,7 @@
 //  BetterTextField.h
 //  BetterTextField
 //
-//  Created by Hua Duong Nguyen on 10/06/16.
+//  Created by Hua Duong Tran on 10/06/16.
 //  Copyright © 2017 appic.me. All rights reserved.
 //
 

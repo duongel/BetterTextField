@@ -2,7 +2,7 @@
 //  BetterTextFieldTests.swift
 //  BetterTextFieldTests
 //
-//  Created by Hua Duong Nguyen on 05/03/2017.
+//  Created by Hua Duong Tran on 05/03/2017.
 //  Copyright © 2017 appic.me. All rights reserved.
 //
 

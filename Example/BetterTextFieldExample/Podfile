@@ -3,7 +3,7 @@ platform :ios, '8.0'
 target 'BetterTextFieldExample' do
   use_frameworks!
 
-  pod 'BetterTextField', :path => '~/Documents/Workspace/BetterTextField'
+  pod 'BetterTextField', :path => '../../'
   pod 'IQKeyboardManager'
   pod "TouchVisualizer", '~>2.0.1'
 end

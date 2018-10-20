@@ -5,8 +5,8 @@ A drop-in replacement for UITextField.
 * adds margin-left and/or margin-right the easy way.
 
 ## Requirements
-* Xcode 8
-* Swift 3
+* Xcode 10
+* Swift 4.2
 
 ## Screenshots
 <img src="Example/Screenshots/demo.gif" alt="Demo" width="300px"/>
@@ -19,14 +19,14 @@ With cocoapods:
 Or drag `BetterTextField.swift` into your project.
 
 ## Known Issues
-If text alignment is set to centered, margin-left equals margin-right by default to keep the text centered.
+If text alignment is set to centered, margin-left equals margin-right by default to keep the text centered, which results in the optical glitch below.
 
 <img src="Example/Screenshots/issue.png" alt="Margin-left Issue" width="400px"/>
 
 # License
 MIT License
 
-Copyright (c) 2016 Hua Duong Nguyen
+Copyright (c) 2018 Hua Duong Tran
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
