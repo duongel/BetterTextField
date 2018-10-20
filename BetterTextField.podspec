@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = "BetterTextField"
-  s.version = "0.4.1"
+  s.version = "0.5.0"
   s.license = { :type => "MIT", :file => "LICENSE" }
   s.summary = "A drop-in replacement for UITextField."
   s.description = <<-DESC
@@ -12,6 +12,7 @@ Pod::Spec.new do |s|
 
   s.platform = :ios
   s.ios.deployment_target = "8.0"
+  s.swift_version = "4.2"
 
   s.source_files = "BetterTextField/*.swift"
   s.requires_arc = true
