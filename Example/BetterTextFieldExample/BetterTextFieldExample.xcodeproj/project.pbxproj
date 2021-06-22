@@ -129,10 +129,9 @@
 			};
 			buildConfigurationList = 95521F7D1D0C14D000411CD8 /* Build configuration list for PBXProject "BetterTextFieldExample" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 				Base,
 			);
