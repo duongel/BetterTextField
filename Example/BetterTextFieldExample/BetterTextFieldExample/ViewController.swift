@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var betterTextField: BetterTextField!
     var centerLine: CAShapeLayer?
 
+
     // MARK: - Initialization
 
     override func viewDidLoad() {
@@ -32,9 +33,10 @@ class ViewController: UIViewController {
         self.view.addGestureRecognizer(tapper)
     }
 
-    func tapped() {
+    @objc func tapped() {
         IQKeyboardManager.shared().resignFirstResponder()
     }
+
 
     // MARK: - Illustration
 
@@ -71,6 +73,7 @@ class ViewController: UIViewController {
         }
     }
 
+
     // MARK: - Text field settings
 
     @IBAction func clearButtonModeChanged(_ sender: UISegmentedControl) {
@@ -84,7 +87,7 @@ class ViewController: UIViewController {
     }
 
     func textField(_ textField: UITextField, setClearButtonMode index: Int) {
-        if let mode = UITextFieldViewMode(rawValue: index) {
+        if let mode = UITextField.ViewMode(rawValue: index) {
             textField.clearButtonMode = mode
         }
     }
