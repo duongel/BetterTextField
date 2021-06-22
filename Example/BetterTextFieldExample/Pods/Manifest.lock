@@ -1,12 +1,12 @@
 PODS:
-  - BetterTextField (0.5.1)
+  - BetterTextField (0.5.2)
   - IQKeyboardManager (4.0.7)
   - TouchVisualizer (2.0.1)
 
 DEPENDENCIES:
   - BetterTextField (from `../../`)
   - IQKeyboardManager
-  - TouchVisualizer (~> 2.0.1)
+  - TouchVisualizer
 
 SPEC REPOS:
   trunk:
@@ -18,10 +18,10 @@ EXTERNAL SOURCES:
     :path: "../../"
 
 SPEC CHECKSUMS:
-  BetterTextField: cd46bff3ce9d5eb5a416bbf9d4d1c8f34d24d5ae
+  BetterTextField: 7e000a8f268e4134765c5bdc05e2ddba67499d17
   IQKeyboardManager: 69002bb4fea60596b710e57d426abc00e5063630
   TouchVisualizer: d1bd1b438d084245332c222d9e14416c271c5f25
 
-PODFILE CHECKSUM: 6edf86f9f6cb018cd4c03ffe441a8e76eaaff063
+PODFILE CHECKSUM: 784a2f23620820866ff609adeb5853f2a2537c14
 
 COCOAPODS: 1.10.1

@@ -1,6 +1,6 @@
 {
   "name": "BetterTextField",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -13,13 +13,13 @@
   },
   "source": {
     "git": "https://github.com/duongel/BetterTextField.git",
-    "tag": "0.5.1"
+    "tag": "0.5.2"
   },
   "platforms": {
     "ios": "8.0"
   },
-  "swift_versions": "4.2",
+  "swift_versions": "5.0",
   "source_files": "BetterTextField/*.swift",
   "requires_arc": true,
-  "swift_version": "4.2"
+  "swift_version": "5.0"
 }
